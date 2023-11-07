@@ -1,0 +1,88 @@
+-------------------------------插入图片1---------------------------------
+\includegraphics[scale=0.6]{fullscreen.png}
+----------------------------浮动体插入图片-------------------------------
+\begin{figure}[h]%h可替换成t表示在页首插入图片；b页尾；p整页
+\centering
+\includegraphics[scale=0.6]{fullscreen.png}
+\caption{this is a figure demo}
+\label{fig:label}
+\end{figure}
+------------------------------双栏插入图片--------------------------------
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{lne_k图像.png}
+\caption{$(k,lne_k)$描点}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{lne_k图像拟合.png}
+\caption{$(k,lne_k)$图像拟合}
+\end{minipage}
+\end{figure}
+-------------------------------长表格--------------------------------------
+\begin{longtable}{p{2cm}p{4cm}p{4cm}p{4cm}}
+\caption{}
+\label{table:label} 
+
+\hline
+	&		&		&	  \\
+
+\hline 
+\endfirsthead
+\hline
+	&		&		&	  \\
+\hline 
+\endhead
+\hline 
+\endfoot
+0&0&0&0\\
+\end{longtable}
+---------------------------------algorithm-------------------------------
+\begin{algorithm} 
+\caption{identifyRowContext} 
+\KwIn{$r_i$, $Backgrd(T_i)$=${T_1,T_2,\ldots ,T_n}$ and similarity threshold $\theta_r$} 
+\KwOut{$con(r_i)$} 
+$con(r_i)= \Phi$\; 
+\For{$j=1;j \le n;j \ne i$} 
+{ 
+float $maxSim=0$\; 
+$r^{maxSim}=null$\; 
+\While{not end of $T_j$} 
+{ 
+compute Jaro($r_i,r_m$)($r_m\in T_j$)\; 
+\If{$(Jaro(r_i,r_m) \ge \theta_r)\wedge (Jaro(r_i,r_m)\ge r^{maxSim})$} 
+{ 
+replace $r^{maxSim}$ with $r_m$\; 
+} 
+} 
+$con(r_i)=con(r_i)\cup {r^{maxSim}}$\; 
+} 
+return $con(r_i)$\; 
+\end{algorithm}
+--------------------------------分段函数1-----------------------------
+\begin{equation}
+f(x)=\left\{
+\begin{aligned}
+x & = & \cos(t) \\
+y & = & \sin(t) \\
+z & = & \frac xy
+\end{aligned}
+\right.
+\end{equation}
+--------------------------------分段函数2-----------------------------
+\begin{equation}
+F^{HLLC}=\left\{
+\begin{array}{rcl}
+F_L & & {0 < S_L}\\
+F^*_L & & {S_L \leq 0 < S_M}\\
+F^*_R & & {S_M \leq 0 < S_R}\\
+F_R & & {S_R \leq 0}
+\end{array} \right.
+\end{equation}
+-------------------------------公式对齐------------------------------
+\begin{align*}
+ f(x) &= (x+a)(x+b) \\
+ &= x^2 + (a+b)x + ab
+\end{align*}

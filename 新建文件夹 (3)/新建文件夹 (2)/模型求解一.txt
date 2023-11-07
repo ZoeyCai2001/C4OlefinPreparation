@@ -1,0 +1,57 @@
+﻿\par 首先对附件1中的每种催化剂组合，研究乙醇转化率与温度、C$_4$ 烯烃的选择性与温度的关系，分别拟合函数，并分析拟合结果。将每组数据分别导入到 MATLAB 中后，使用 MATLAB 的函数拟合工具箱进行数据拟合。对于拟合函数的选择如下：线性函数、指数函数、不超过三次的多项式函数以及 Fourier 函数（Fourier 级数的有限和）。前两个函数可以对单调增长（下降）的数据进行不同增长（下降）速率的刻画，后两个函数可以拟合一些更复杂的数据，表现数据的波动趋势。对于每组数据，我们依据均方误差，从上述四种拟合函数中选择最优的拟合函数进行拟合；若出现指标近似的情况，则优先选择简单函数。
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{A3temp-c4.png}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{A3temp-乙醇.png}
+\end{minipage}
+\caption{\centering A$_3$催化剂时：C$_4$烯烃选择性和乙醇转化率关于T的\\拟合函数$g_1(T)$，$g_2(T)$}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{A9temp-c4.png}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{A9temp-乙醇.png}
+\end{minipage}
+\caption{\centering A$_9$催化剂时：C$_4$烯烃选择性和乙醇转化率关于T的\\拟合函数$g_3(T)$，$g_4(T)$}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{B6temp-c4.png}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=6cm]{B6temp-乙醇.png}
+\end{minipage}
+\caption{\centering B$_6$催化剂时：C$_4$烯烃选择性和乙醇转化率关于T的\\拟合函数$g_5(T)$}，$g_6(T)$}
+\end{figure}
+
+\begin{equation}
+\begin{aligned}
+\nonumber
+g_1(T)&=29.57+7.83\cos(0.02T)+23.34\sin(0.02T)\\
+g_2(T)&=0.42T-95.88\\
+g_3(T)&=0.25T-59.1\\
+g_4(T)&=0.007e^{0.02T}\\
+g_5(T)&=17.29-11.31\cos(0.02T)+6.735$\sin(0,02T)$\\
+g_6(T)&=0.06e^{0.02T}
+
+\end{aligned}
+\end{equation}
+
+\par 以上为部分的拟合结果，完整的结果见附录。在拟合的过程中，我们发现：在所有的催化剂组合下，乙醇转化率都会随着反应温度单调上升，有的环境下增长速率为线性，有的为指数；而在大部分催化剂组合下，C$_4$烯烃的选择性会随温度近似线性地上升，在小部分催化剂组合下，C$_4$烯烃的选择性会随温度的升高而出现波动，即会在低于某一温度时随温度升高而上升，在此温度达到峰值，随后下降。
+\par 同时，拟合结果的分析也对第三个问题有着一定程度的启发：若想获得最大的 C$_4$烯烃的收率，必须同时获得较大的乙醇转化率和C$_4$烯烃的选择性，而不同的催化剂环境将会对结果有着很大的影响。在第三问中，我们最理想的催化剂组合应该是使得乙醇转化率随温度以指数增长，并使得 C$_4$烯烃的选择性随温度近似线性增长。

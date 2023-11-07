@@ -1,0 +1,128 @@
+\documentclass[a4paper,10.5pt]{ctexart}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry} %页边距
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ctex}
+\usepackage{braket}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[european]{circuitikz}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{bm}         % 加粗方程字体
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{helvet}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
+\usepackage{textcomp}
+\usepackage{physics}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings} 
+\usepackage{xcolor}
+\usepackage{algpseudocode}
+\usepackage{epsfig}
+\usepackage[boxed]{algorithm2e}
+\lstset{
+  language=Matlab,  %代码语言使用的是matlab
+  frame=shadowbox, %把代码用带有阴影的框圈起来
+  rulesepcolor=\color{red!20!green!20!blue!20},%代码块边框为淡青色
+  keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体
+  commentstyle=\color{red!10!green!70}\textit,    % 设置代码注释的颜色
+  showstringspaces=false,%不显示代码字符串中间的空格标记
+  numbers=left, % 显示行号
+  numberstyle=\tiny,    % 行号字体
+  stringstyle=\ttfamily, % 代码字符串的特殊格式
+  breaklines=true, %对过长的代码自动换行
+  extendedchars=false,  %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+%   escapebegin=\begin{CJK*},escapeend=\end{CJK*},      % 代码中出现中文必须加上，否则报错
+  texcl=true}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}       
+\renewcommand{\algorithmicensure}{ \textbf{Initialize:}} 
+\renewcommand{\algorithmicreturn}{ \textbf{Output:}}     
+
+%算法格式
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\pagestyle{plain}
+
+\lhead{}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\usepackage{hyperref} %bookmarks
+\hypersetup{colorlinks, bookmarks, unicode} %unicode
+\usepackage{multicol}
+\lstset{
+	backgroundcolor=\color{green!10!blue!15},%代码块背景色
+	rulesepcolor= \color{red!40!blue!100}, %代码块边框颜色
+	breaklines=true,  %代码过长则换行
+	numbers=left, %行号在左侧显示
+	numberstyle= \small,%行号字体
+	keywordstyle= \color{blue},%关键字颜色
+	commentstyle=\color{gray}, %注释颜色
+	frame=shadowbox%用方框框住代码块
+}
+\begin{document}
+记大圆的圆心坐标为$(x_0,y_0)$,第一台摄像机$m_1$与圆心连线与$x$轴夹角为$\theta$，则$m_1$坐标为$(x_0+50cos\ \theta,y_0+50sin\ \theta)$，设为$(x_1,y_1)$,则过$m_1$所作的椭圆的两条切线与椭圆的切点的连线方程为：$$\frac{x_1x}{l^2}+\frac{y_1y}{k^2}=1$$
+\par 联立方程组
+\begin{equation}
+\nonumber
+\left\{
+\begin{aligned}
+\frac{x_1x}{l^2}+\frac{y_1y}{k^2}=1 \\
+\frac{x^2}{l^2}+\frac{y^2}{k^2}=1
+\end{aligned}
+\right.
+\end{equation}
+\par 利用$MATLAB$求解得到由$m_1$作切线得到的两个切点$T_1(x_2,y_2)$、$T_2(x_3,y_3)$.
+由弦长公式，得到割线$T_1T_2$的长度$L$：
+\begin{equation}
+\begin{aligned}
+L^2=(1+\frac{k^4x_{1}^2}{l^4y_{1}^2})(x_2-x_3)^2
+\end{aligned}
+\end{equation}
+\par 进一步，利用直角三角形$T_1T_2T_3$的各边关系，得到$T_1T_3$即摄像机拍到的线段$a$的表达式为：
+\begin{equation}
+\begin{aligned}
+a&=L·|cos(\phi-\theta-\frac{\pi}{2})|\\
+&=L·|sin(\phi-\theta)|
+\end{aligned}
+\end{equation}
+\par 其中，$\phi=arctan(-\frac{k^2x_1}{l^2y_1})$，为割线$T_1T_2$与$x$轴正方向的夹角。
+
+\par 下面考虑照片上所反映的线段的端点偏离圆心O的程度（由端点到圆心的较短距离衡量）。由于$O(x_0,y_0)$，作$Om_1$的延长线与$T_1T_3$交于点Q，则$QT_1$为照片上所反映的线段的端点$T_1$到圆心$0$的距离。下面考虑$QT_1$的长度:
+\par $OQ$的直线方程为：$$y-y_0=tan\ \theta(x-x_0)$$
+\par $T_1Q$的直线方程为：$$cos\ \theta(x-x_2)+sin\ \theta(y-y_2)=0$$
+\par 故而两条直线的交点$Q(x_4,y_4)$坐标为
+\begin{equation}
+\begin{aligned}
+x_4&=\frac{cos\theta x_2-sin\ \theta y_0+sin\theta tan\theta x_0+sin\theta y_2}{cos\theta+sin\theta tan\theta}\\
+y_4&=\frac{sin\theta x_2-sin\theta x_0+cos\theta y_0+sin\theta tan\theta y_2}{cos\theta+sin\theta tan\theta}
+\end{aligned}
+\end{equation}
+\par 故而
+$$T_1Q=\sqrt{x_4-x_2)^2+(y_4-y_2)^2}$$
+\par 同理可以得到另一个端点$T_2$偏离圆心的距离$T_2R=\sqrt{(x_5-x_3)^2+(y_5-y_3)^2}$，其中$R$的垂点$(x_5,y_5)$为:
+\begin{equation}
+\begin{aligned}
+x_4&=\frac{cos\theta x_3-sin\ \theta y_0+sin\theta tan\theta x_0+sin\theta y_3}{cos\theta+sin\theta tan\theta}\\
+y_4&=\frac{sin\theta x_3-sin\theta x_0+cos\theta y_0+sin\theta tan\theta y_3}{cos\theta+sin\theta tan\theta}
+\end{aligned}
+\end{equation}
+\par 取二者中较小值作为观测到的线段的端点偏离圆心$O$的程度，即
+$$d_1=min\{T_1Q,T_2R\}$$
+\par 同时考虑$m_2$与$m_3$观测到的线段长度以及偏离程度，将上式中$\theta$分别替换为$\theta+\frac{\pi}{3}$以及$\theta+\frac{2\pi}{3}$可以得到$b$、$c$以及$d_2$、$d_3$的表达式。
+\end{document}

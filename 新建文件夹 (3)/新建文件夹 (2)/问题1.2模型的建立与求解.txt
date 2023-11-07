@@ -1,0 +1,111 @@
+再考虑350度时给定的催化剂组合在一次实验不同时间的测试结果，并对结果进行分析。
+
+利用MATLAB做出乙醇转化率关于时间的变化曲线以及各种生成物关于时间的变化折线，得到下图：
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.40\textwidth}
+\centering
+\includegraphics[width=7.5cm]{乙醇转化率.png}
+\caption{乙醇转化率关于时间的折线}
+\end{minipage}
+\begin{minipage}[t]{0.56\textwidth}
+\centering
+\includegraphics[width=10cm]{选择性与时间.png}
+\caption{各产物选择性关于时间的折线}
+\end{minipage}
+\end{figure}
+
+观察图1可以得到，乙醇转化率与时间有明显的关系，乙醇转化率随时间的增加而逐渐减小，乙醇转换速率放缓；观察图2可以得到，$C_4$烯烃的选择性与脂肪醇的选择性明显高于其余三种产物，可以猜测$C_4$烯烃与脂肪醇是该实验的主要产物，观察随时间增加各产物的变化，发现乙醛的选择性随时间增加而增加，脂肪醇的选择性随时间增加而减少，而$C_4$烯烃与乙烯、甲基苯甲醛（醇）的选择性与时间并没有明显的线性关系。下面考虑利用MATLAB分别拟合各个产物选择性关于时间的函数，从而进一步分析时间对于实验结果的影响。
+
+对于不同产物选择性与时间的变化关系，使用MATLAB拟合工具箱进行拟合，拟合函数的选取方式与 5.1.1 中相同。考虑到所有产物的选择性之和为100\%，故而$C_4$烯烃选择性关于时间的关系受到其他产物的影响，除乙烯选择性、$C_4$烯烃选择性、乙醛选择性、碳数为4-12脂肪醇选择性、甲基苯甲醛和甲基苯甲醇选择性以外，还有其它产物，受到此类产物的影响，$C_4$烯烃选择性难以获得较好的函数拟合。在多次实验之后，得到拟合优度$R^2$较接近1的拟合函数图像如下：
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-乙醇.png}
+\caption{乙醇转化率关于时间的拟合函数$f_1(t)$}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-乙烯.png}
+\caption{乙烯选择性关于时间的拟合函数$f_2(t)$}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-乙醛.png}
+\caption{乙醛选择性关于时间的拟合函数$f_3(t)$}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-脂肪醇.png}
+\caption{脂肪醇选择性关于时间的拟合函数$f_4(t)$}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-甲基苯甲醛（醇）.png}
+\caption{\centering 甲基苯甲醛（醇）选择性关于时间的\quad 拟合函数$f_5(t)$}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{time-c4.png}
+\caption{$C_4$烯烃选择性关于时间的折线}
+\end{minipage}
+\end{figure}
+
+函数关系式分别为：
+
+
+\begin{equation}
+\begin{aligned}
+f_1(t)&=0.0001772t^2-0.1051t+45.25 \\
+f_2(t)&=4.466-0.2524\cos(0.01325t)-0.004488\sin(0.01325t)\\
+f_3(t)&=0.01557t+4.808\\
+f_4(t)&=0.0002245t^2-0.09848t+41.84\\
+f_5(t)&=4.753\times10^{-7}t^3-0.0002985t^2+0.05497t+1.631\\
+
+\end{aligned}
+\end{equation}
+
+考察上述拟合函数的拟合优度，发现对于所有的函数关系，拟合优度$R^2> 0.91$（具体回归评价指标见模型的分析与检验部分）,故而可以利用上述函数作为各产物选择性关于时间的近似关系。观察图象以及函数关系式可以得到：乙醇转化率随时间的增加而降低，而乙烯选择性以及乙醛选择性都随时间增加有明显的增加；脂肪醇的选择性随时间增加而先降低，而到230min左右，脂肪醇的选择性又随时间的增加而产生一定的上升趋势；甲基苯甲醛（醇）的选择性在130min之前随时间的增加有显著的增长，而130min后增长放缓甚至开始下降；$C_4$烯烃的选择性在100min之前随时间增加有明显的增加，而100min之后增长放缓，并于150min后下降。
+
+
+\begin{table}[htbp]
+  \centering
+  \caption{产物选择性关于时间$t$的拟合函数与评价指标}
+    \begin{tabular}{cccccc}
+    \toprule[2pt]
+          & 乙醇    & 乙烯    & 乙醛    & 脂肪醇   & 甲基苯甲醛（醇） \\
+    \midrule
+    拟合函数  &二次多项式 &Fourier函数 &线性函数 & 二次多项式 &三次多项式 \\
+    SSE  & 1.835 & 0.008172 & 0.5255 & 6.081 & 0.1753 \\
+    R^2 & 0.9878 & 0.9674 & 0.9588 & 0.9151 & 0.9468 \\
+    Adjusted R^2 & 0.9817 & 0.9348 & 0.9505 & 0.8727 & 0.8936 \\
+    RMSE  & 0.6773 & 0.05219 & 0.3242 & 1.233 & 0.2417 \\
+    \bottomrule[2pt]
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\begin{breakablealgorithm}
+        \caption{通过$a,b,c$求解椭圆面积$S$的算法}
+        \begin{algorithmic}[1] %每行显示行号
+            \Require $a,b,c$
+            \Ensure  $S$
+                    \If {$(a=b\wedge b<\frac{c}{2})\vee (a=c\wedge a<\frac{b}{2})\vee(b=c\wedge b<\frac{a}{2})$}
+                    \State return $ -1;$
+                    \EndIf
+                    \If {$a=b\wedge b=c$}
+                    \State $S=\frac{a^2\pi}{4};$
+                    \State return $S$
+                    \EndIf
+
+     \end{algorithmic}
+    \end{breakablealgorithm}

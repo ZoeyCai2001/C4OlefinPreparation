@@ -1,0 +1,267 @@
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A2temp-c4.png}
+\caption{\centering $A_2$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A2temp-乙醇.png}
+\caption{\centering $A_2$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A3temp-c4.png}
+\caption{\centering $A_3$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A3temp-乙醇.png}
+\caption{\centering $A_3$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A4temp-c4.png}
+\caption{\centering $A_4$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A4temp-乙醇.png}
+\caption{\centering $A_4$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A5temp-c4.png}
+\caption{\centering $A_5$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A5temp-乙醇.png}
+\caption{\centering $A_5$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A6temp-c4.png}
+\caption{\centering $A_6$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A6temp-乙醇.png}
+\caption{\centering $A_6$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A7temp-c4.png}
+\caption{\centering $A_7$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A7temp-乙醇.png}
+\caption{\centering $A_7$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A8temp-c4.png}
+\caption{\centering $A_8$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A8temp-乙醇.png}
+\caption{\centering $A_8$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A9temp-c4.png}
+\caption{\centering $A_9$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A9temp-乙醇.png}
+\caption{\centering $A_9$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A10temp-c4.png}
+\caption{\centering $A_{10}$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A10temp-乙醇.png}
+\caption{\centering $A_{10}$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A11temp-c4.png}
+\caption{\centering $A_{11}$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A11temp-乙醇.png}
+\caption{\centering $A_{11}$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A12temp-c4.png}
+\caption{\centering $A_{12}$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A2temp-乙醇.png}
+\caption{\centering $A_{12}$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A13temp-c4.png}
+\caption{\centering $A_{13}$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A13temp-乙醇.png}
+\caption{\centering $A_{13}$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A14temp-c4.png}
+\caption{\centering $A_{14}$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{A14temp-乙醇.png}
+\caption{\centering $A_{14}$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B1temp-c4.png}
+\caption{\centering $B_1$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B1temp-乙醇.png}
+\caption{\centering $B_1$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B2temp-c4.png}
+\caption{\centering $B_2$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B2temp-乙醇.png}
+\caption{\centering $B_2$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B3temp-c4.png}
+\caption{\centering $B_3$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B3temp-乙醇.png}
+\caption{\centering $B_3$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B4temp-c4.png}
+\caption{\centering $B_4$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B4temp-乙醇.png}
+\caption{\centering $B_4$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B5temp-c4.png}
+\caption{\centering $B_5$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B5temp-乙醇.png}
+\caption{\centering $B_5$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B6temp-c4.png}
+\caption{\centering $B_6$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B6temp-乙醇.png}
+\caption{\centering $B_6$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B7temp-c4.png}
+\caption{\centering $B_7$催化剂中C$_4$烯烃选择性关于温度的拟合函数}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=9cm]{B7temp-乙醇.png}
+\caption{\centering $B_7$催化剂中乙醇转化率关于温度的\\拟合函数}
+\end{minipage}
+\end{figure}

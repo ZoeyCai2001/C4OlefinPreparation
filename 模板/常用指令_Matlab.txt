@@ -1,0 +1,2 @@
+----------------读取EXCEL表格数据到MATLAB成为矩阵--------------------
+data=xlsread（‘filename’，‘sheet‘，’range‘）

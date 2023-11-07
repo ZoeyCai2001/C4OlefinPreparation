@@ -1,0 +1,296 @@
+\documentclass[a4paper,10.5pt]{ctexart}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry} %页边距
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ctex}
+\usepackage{braket}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[european]{circuitikz}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{bm}         % 加粗方程字体
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{helvet}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\geometry{left=2.0cm,right=2.0cm,top=2.0cm,bottom=2.0cm}
+\usepackage{textcomp}
+\usepackage{physics}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings} 
+\usepackage{xcolor}
+\usepackage{algpseudocode}
+\usepackage{epsfig}
+
+
+\usepackage{algorithm,algpseudocode,float}
+\usepackage{lipsum}
+
+\makeatletter
+\newenvironment{breakablealgorithm}
+  {% \begin{breakablealgorithm}
+   \begin{center}
+     \refstepcounter{algorithm}% New algorithm
+     \hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+     \renewcommand{\caption}[2][\relax]{% Make a new \caption
+       {\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+       \ifx\relax##1\relax % #1 is \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+       \else % #1 is not \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+       \fi
+       \kern2pt\hrule\kern2pt
+       \renewcommand{\algorithmicensure}{\textbf{Output:}}
+     }
+  }{% \end{breakablealgorithm}
+     \kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+   \end{center}
+  }
+\makeatother
+%\usepackage[boxed]{algorithm2e}
+\lstset{
+  language=Matlab,  %代码语言使用的是matlab
+  frame=shadowbox, %把代码用带有阴影的框圈起来
+  rulesepcolor=\color{red!20!green!20!blue!20},%代码块边框为淡青色
+  keywordstyle=\color{blue!90}\bfseries, %代码关键字的颜色为蓝色，粗体
+  commentstyle=\color{red!10!green!70}\textit,    % 设置代码注释的颜色
+  showstringspaces=false,%不显示代码字符串中间的空格标记
+  numbers=left, % 显示行号
+  numberstyle=\tiny,    % 行号字体
+  stringstyle=\ttfamily, % 代码字符串的特殊格式
+  breaklines=true, %对过长的代码自动换行
+  extendedchars=false,  %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+%   escapebegin=\begin{CJK*},escapeend=\end{CJK*},      % 代码中出现中文必须加上，否则报错
+  texcl=true}
+
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+\renewcommand{\algorithmicrequire}{ \textbf{Input:}}       
+\renewcommand{\algorithmicensure}{ \textbf{Initialize:}} 
+\renewcommand{\algorithmicreturn}{ \textbf{Output:}}     
+
+%算法格式
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\pagestyle{plain}
+
+\lhead{}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\usepackage{hyperref} %bookmarks
+\hypersetup{colorlinks, bookmarks, unicode} %unicode
+\usepackage{multicol}
+\lstset{
+	backgroundcolor=\color{green!10!blue!15},%代码块背景色
+	rulesepcolor= \color{red!40!blue!100}, %代码块边框颜色
+	breaklines=true,  %代码过长则换行
+	numbers=left, %行号在左侧显示
+	numberstyle= \small,%行号字体
+	keywordstyle= \color{blue},%关键字颜色
+	commentstyle=\color{gray}, %注释颜色
+	frame=shadowbox%用方框框住代码块
+}
+\begin{document}
+由于三台摄像机被等距地放置在直径为$1m$的圆周上，故而确定一台摄像机在圆周上的位置，即可确定剩余两台摄像机的位置。假设摄像机$m_1$与圆心的连线$l_1$与$x$轴正半轴的夹角分别为$\theta(0\le \theta \le \frac{2\pi}{3} )$，则另外两台摄像机与$x$轴正半轴的夹角为$\theta +\frac{\pi}{3}$与$\theta +\frac{2\pi}{3}$.
+\par 首先考虑$\theta \ne \frac{\pi}{2}$且$\theta+\frac{\pi}{3} \ne \frac{\pi}{2}$且$\theta +\frac{2\pi}{3}\ne \frac{3\pi}{2}$则$$l_1:y=tan\theta\cdot x$$
+\par 假设所求椭圆长半轴与短半轴长分别为$l$、$k$，则对于椭圆上任意一点$(x_0,y_0)(y_0\ne0)$，过$(x_0,y_0)$且与椭圆相切的直线$l_0$的方程为$$l_0:\frac{x_0x}{l^2}+\frac{y_0y}{k^2}=1$$则$l_0$的斜率为$-\frac{x_0k^2}{y_0l^2}$.
+\par 设与$l_1$平行且与椭圆相交的直线分别为$l_2$、$l_3$，它们与椭圆的切点分别为$(x_2,y_2)$、$(x_3,y_3)$,则由$l_1$与$l_2$、$l_3$的斜率相等可得：
+\begin{equation}
+tan\theta=-\frac{x_2k^2}{y_2l^2}=-\frac{x_3k^2}{y_3l^2}
+\end{equation}
+\par 由于$(x_2,y_2)$、$(x_3,y_3)$为椭圆上两点，满足方程
+\begin{equation}
+\begin{align*}
+\frac{x_2^2}{l^2}+\frac{y_2^2}{k^2}&=1 \\
+ \frac{x_3^2}{l^2}+\frac{y_3^2}{k^2}&=1
+\end{align*}
+\end{equation}
+\par 由$(1)(2)$两式可得：
+\begin{equation}
+\left\{
+\begin{aligned}
+x_2^2=x_3^2=\frac{l^4tan^2\theta}{l^2tan^2\theta+k^2} \\
+y_2^2=y_3^2=\frac{k^4}{l^2tan^2\theta+k^2}
+\end{aligned}
+\right.
+\end{equation}
+\par 由$l_2$的直线方程为$$l_2:\frac{x_2x}{l^2}+\frac{y_2y}{k^2}=1$$
+得$l_2$与$l_3$直线之间的距离(即为$(x_3,y_3)$到$l_2$的距离)$d_1$满足：
+\begin{align*}
+d_1^2&= \frac{|\frac{x_2x_3}{l^2}+\frac{y_2y_3}{k^2}-1|^2}{\frac{x_2^2}{l^4}+\frac{y_2^2}{k^4}}\\
+ &=\frac{|-\frac{x_2^2}{l^2}-\frac{y_2^2}{k^2}-1|^2}{\frac{x_2^2}{l^4}+\frac{y_2^2}{k^4}}\\
+ &=\frac{4}{\frac{x_2^2}{l^4}+\frac{y_2^2}{k^4}}
+\end{align*}
+\par 将(3)代入可得：
+$$d_1^2=\frac{4(l^2tan^2\theta+k^2)}{1+tan^2\theta}$$
+\par 由于$d$即为摄像机所得的线段长度，故而得到三个方程：
+\begin{equation}
+\left\{
+\begin{aligned}
+a&=2\sqrt{\frac{l^2tan^2\theta+k^2}{1+tan^2\theta}}\\
+b&=2\sqrt{\frac{l^2tan^2(\theta+\frac{\pi}{3})+k^2}{1+tan^2(\theta+\frac{\pi}{3})}}\\
+c&=2\sqrt{\frac{l^2tan^2(\theta+\frac{2\pi}{3})+k^2}{1+tan^2(\theta+\frac{2\pi}{3})}}
+
+\end{aligned}
+\right.
+\end{equation}
+\par 再考虑$\theta=\frac{\pi}{2}$，显然有：
+\begin{equation}
+\left\{
+\begin{aligned}
+a&=2l\\
+b&=\sqrt{l^2+3k^2}\\
+c&=\sqrt{l^2+3k^2}
+\end{aligned}
+\right.
+\end{equation}
+\par 再考虑$\theta=\frac{\pi}{6}$，显然有：
+
+\begin{equation}
+\left\{
+\begin{aligned}
+a&=\sqrt{l^2+3k^2}\\
+b&=2l\\
+c&=\sqrt{l^2+3k^2}
+\end{aligned}
+\right.
+\end{equation}
+
+\par 最后考虑$\theta=\frac{5\pi}{6}$，显然有：
+
+\begin{equation}
+\left\{
+\begin{aligned}
+a&=\sqrt{l^2+3k^2}\\
+b&=\sqrt{l^2+3k^2}\\
+c&=2l
+\end{aligned}
+\right.
+\end{equation}
+\par 综上所述：当$a,b,c$互不相等时，可利用$(4)$进行求解，而$a,b,c$中存在两个值相等时，可视相等情况分别利用$(5)(6)(7)$求解。
+\par 下利用$Matlab$中$vpasolve$函数对方程进行求解：$vpasolve$函数可以求得代数方程式的数值解。对于含有$m$个未知数$[x_1,x_2,...,x_m]$与$n$个等式方程组$[eq_1,eq_2,...,eq_n]$，函数$vpasolve([eq_1,...,eq_n],[x_1,...,x_m],X_0)$可以返回方程的数值解，其中$X_0$为未知数的初值或者数值解所在的区间。
+\par 在$Matlab$中执行以下命令：
+
+\begin{breakablealgorithm}
+        \caption{通过$a,b,c$求解椭圆面积$S$的算法}
+        \begin{algorithmic}[1] %每行显示行号
+            \Require $a,b,c$
+            \Ensure  $S$
+                    \If {$(a=b\wedge b<\frac{c}{2})\vee (a=c\wedge a<\frac{b}{2})\vee(b=c\wedge b<\frac{a}{2})$}
+                    \State return $ -1;$
+                    \EndIf
+                    \If {$a=b\wedge b=c$}
+                    \State $S=\frac{a^2\pi}{4};$
+                    \State return $S$
+                    \EndIf
+                    \If {$a=b\wedge b\ne c$}
+                    \State $l=\frac{c}{2};$
+                    \State $k=\sqrt{\frac{b^2-l^2}{3}};$
+                    \State $S=lk\pi;$
+                    \State return $S$;
+                    \EndIf
+                    \If {$a=c\wedge b\ne c$}
+                    \State $l=\frac{b}{2};$
+                    \State $k=\sqrt{\frac{a^2-l^2}{3}};$
+                    \State $S=lk\pi;$
+                    \State return $S$;
+                    \EndIf
+                    \If {$b=c\wedge a\ne c$}
+                    \State $l=\frac{a}{2};$
+                    \State $k=\sqrt{\frac{b^2-l^2}{3}};$
+                    \State $S=lk\pi;$
+                    \State return $S$;
+                    \EndIf 
+                    \If{$a\ne b\wedge b\ne c\wedge c\ne a$}
+                    \State $solve\ equations$
+                    \State $a=2\sqrt{\frac{l^2tan^2\theta+k^2}{1+tan^2\theta}}$
+                    \State $b=2\sqrt{\frac{l^2tan^2(\theta+\frac{\pi}{3})+k^2}{1+tan^2(\theta+\frac{\pi}{3})}}$
+                    \State $c=2\sqrt{\frac{l^2tan^2(\theta+\frac{2\pi}{3})+k^2}{1+tan^2(\theta+\frac{2\pi}{3})}}$           
+                    \If {$l\ is\ not\ a\ real\ number$ or $k\ is\  not\  a\  real\  number$}
+                    \State return$\ -1;$
+                    \Else 
+                    \State $S=lk\pi;$
+                    \State return $S;$
+                    \EndElse
+                    \EndIf
+                    \EndIf
+
+     \end{algorithmic}
+    \end{breakablealgorithm}
+
+\par 通过该程序即可由输入$a$、$b$、$c$得到面积$S$的数值解,无解时返回$-1$。
+\par 下面考虑在$Matlab$中使用$solve$函数求得$l,k,\theta$的显式解：$solve$函数与$vpasolve$函数的用法与功能类似，$solve$函数还能模拟人工运算求得函数的公式解。
+\par 在$Matlab$中尝试使用$solve$函数求解方程(4)，未得到显式解。
+\par 再考虑所拍摄的物体为直线或圆的情况：
+
+\begin{itemize}
+  \item [1)] 所拍摄物体为线段    
+\par 保持上述公式推导不变，取$k=0$，则可得到
+\begin{equation}
+\left\{
+\begin{aligned}
+a&=2lsin\ \theta\\
+b&=2l|sin(\theta+\frac{\pi}{3})|\\
+c&=2l|sin(\theta+\frac{2\pi}{3})|
+\end{aligned}
+\right.
+\end{equation}
+若$\theta\in[0,\frac{\pi}{3})$,此时$b$、$c$满足关系式：
+\begin{equation}
+\nonumber
+\left\{
+\begin{aligned}
+b+c&=2\sqrt{3}\ lcos\ \theta\\
+b-c&=2lsin\ \theta=a
+\end{aligned}
+\right.
+\end{equation}
+\par 利用$a$、$b$、$c$表示$l$、$\theta$得：
+
+\begin{equation}
+\nonumber
+\left\{
+\begin{aligned}
+l^2&=\frac{(b+c)^2+3a^2}{12}\\
+sin^2\theta&=\frac{3(b-c)^2}{3a^2+(b+c)^2}
+\end{aligned}
+\right.
+\end{equation}
+\par 回代入$(8)$得$$a=b-c$$
+若$\theta\in[\frac{\pi}{3},\frac{2\pi}{3}]$,此时$b$、$c$满足关系式：
+\begin{equation}
+\nonumber
+\left\{
+\begin{aligned}
+b+c&=2lsin\ \theta=a\\
+b-c&=2\sqrt{3}\ lcos\ \theta
+\end{aligned}
+\right.
+\end{equation}
+\par 利用$a$、$b$、$c$表示$l$、$\theta$得：
+
+\begin{equation}
+\nonumber
+\left\{
+\begin{aligned}
+l^2&=\frac{(b-c)^2+3a^2}{12}\\
+sin^2\theta&=\frac{3a^2}{3a^2+(b-c)^2}
+\end{aligned}
+\right.
+\end{equation}
+\par 回代入$(8)$得$$a=b+c$$
+  \item [2)] 所拍摄物体为圆
+\end{itemize}
+
+\end{document}
